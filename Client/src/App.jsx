@@ -42,10 +42,19 @@ function Layout() {
 
   const isAuthRoute = location.pathname.startsWith('/login') || location.pathname.startsWith('/register')
 
+  // Render auth pages separately without layout
+  if (isAuthRoute) {
+    return (
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    )
+  }
+
   return (
     <div className={`sb-app ${sidebarOpen ? '' : 'is-collapsed'}`}>
-      {!isAuthRoute && (
-        <Sidebar
+      <Sidebar
         activeKey={activeKey}
         onNavigate={(key) => {
           if (key === 'logout') {
@@ -68,14 +77,9 @@ function Layout() {
           navigate(map[key] || '/')
         }}
       />
-      )}
-      {!isAuthRoute && (
-        <Navbar isSidebarOpen={sidebarOpen} onToggleSidebar={() => setSidebarOpen(v => !v)} />
-      )}
+      <Navbar isSidebarOpen={sidebarOpen} onToggleSidebar={() => setSidebarOpen(v => !v)} />
       <main className="sb-content">
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
 
           <Route path="/" element={<Navigate to={isAuthenticated ? '/dashboard' : '/login'} replace />} />
           <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />

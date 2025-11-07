@@ -36,37 +36,38 @@ export default function Register() {
   };
 
   return (
-    <div className="flex min-h-screen bg-gray-50 items-center justify-center">
-      {/* Left Image */}
-      <div className="hidden lg:flex flex-1 items-center justify-center bg-gradient-to-tr from-blue-600 to-indigo-700 text-white p-10">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-md text-center"
-        >
-          <img
-            src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif"
-            alt="SmartBilling Illustration"
-            className="rounded-2xl shadow-lg mb-6"
-          />
-          <h1 className="text-3xl font-bold mb-2">Create your SmartBilling Account</h1>
-          <p className="text-blue-100">
-            Register to start managing sales, inventory, and reports easily —
-            made for every business and industry.
-          </p>
-        </motion.div>
-      </div>
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+      <div className="w-full max-w-6xl flex items-center justify-center">
+        {/* Left Image */}
+        <div className="hidden lg:flex flex-1 items-center justify-center bg-gradient-to-tr from-blue-600 to-indigo-700 text-white p-10 rounded-l-2xl">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-md text-center"
+          >
+            <img
+              src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif"
+              alt="SmartBilling Illustration"
+              className="rounded-2xl shadow-lg mb-6 w-full"
+            />
+            <h1 className="text-3xl font-bold mb-2">Create your SmartBilling Account</h1>
+            <p className="text-blue-100">
+              Register to start managing sales, inventory, and reports easily —
+              made for every business and industry.
+            </p>
+          </motion.div>
+        </div>
 
-      {/* Form Section */}
-      <div className="flex flex-1 items-center justify-center p-6 w-full">
-        <motion.form
-          onSubmit={onSubmit}
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md mx-auto"
-        >
+        {/* Form Section */}
+        <div className="flex flex-1 items-center justify-center p-6 lg:p-10">
+          <motion.form
+            onSubmit={onSubmit}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="bg-white shadow-lg rounded-2xl lg:rounded-l-none rounded-r-2xl p-8 w-full max-w-md"
+          >
           <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
             Create Account
           </h2>
@@ -138,6 +139,7 @@ export default function Register() {
             </Link>
           </p>
         </motion.form>
+        </div>
       </div>
     </div>
   );
