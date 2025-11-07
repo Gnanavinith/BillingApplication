@@ -1,6 +1,6 @@
 // API endpoints in one place
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const BASE_URL = import.meta.env.VITE_API_URL || 'https://billingapplication-1-dn0w.onrender.com';
 
 export const API_ROUTES = {
   BASE_URL,
