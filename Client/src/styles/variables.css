@@ -1,0 +1,17 @@
+/* CSS Variables for SmartBilling UI */
+:root {
+  --sb-font-sans: 'Inter', 'Poppins', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+
+  --sb-bg: #ffffff;
+  --sb-bg-muted: #F9FAFB; /* sidebar */
+  --sb-text: #0f172a; /* slate-900 */
+  --sb-text-muted: #6b7280; /* gray-500 */
+  --sb-border: #E5E7EB; /* gray-200 */
+  --sb-primary: #2563EB; /* blue-600 */
+  --sb-primary-100: #DBEAFE; /* blue-100 */
+  --sb-primary-50: #EFF6FF; /* blue-50 */
+  --sb-accent: #1D4ED8; /* blue-700 */
+
+  --sb-card-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --sb-rounded: 12px;
+}
